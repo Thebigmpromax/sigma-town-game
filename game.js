@@ -29,10 +29,12 @@ if (select == "A") {
 } else if (select == "B") {
 const loadMoney = fs.readFileSync("playerMoney.txt", "utf8")
 playerMoney = loadMoney
-console.log(playerMoney)
+console.log('loaded playerMoney.txt')
 const loadHouse = fs.readFileSync("playerHouse.txt", "utf8")
 playerHouse = loadHouse
-console.log(playerHouse)
+console.log('Loaded playerHouse.txt')
+console.log(`I am in my ${playerHouse} and have ${playerMoney} dollars.`)
+
 } else {
   console.log("Invalid Selection")
 };
