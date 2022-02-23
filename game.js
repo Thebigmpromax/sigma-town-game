@@ -128,6 +128,5 @@ if(playerMale == "Sigma Male" && playerMoney < 1000 && playerHouse == "Apartment
 } else {
   console.log("Ur a sigma and ur decent.")
 }
-await new Promise(resolve => setTimeout(resolve, 5000));
-console.log("Shutting Down")
-await new Promise(resolve => setTimeout(resolve, 5000));
+var sleep = require('system-sleep');
+sleep(10*1000);
