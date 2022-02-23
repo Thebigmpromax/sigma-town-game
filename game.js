@@ -64,7 +64,6 @@ if (select == "A") {
       }
     })
   }
- 
 } else if (select == "B") {
 const loadMoney = fs.readFileSync("playerMoney.txt", "utf8")
 playerMoney = loadMoney
