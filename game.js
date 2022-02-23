@@ -3,7 +3,7 @@ const prompt = require("prompt-sync")();
 
 let playerMoney = "100";
 let playerHouse = "Apartment";
-let swag = "Poor Gear";
+let playerSwag = "Poor Gear";
 
 function daily(choice) {
   console.log(`
