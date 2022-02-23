@@ -77,7 +77,7 @@ console.log('Loaded playerSwag.txt')
 const loadMale = fs.readFileSync("playerMale.txt", "utf8")
 playerMale = loadMale
 console.log('Loaded playerMale.txt')
-console.log(`I am a ${playMale} in my ${playerHouse} and have ${playerMoney} dollars with ${playerSwag}`)
+console.log(`I am a ${playerMale} in my ${playerHouse} and have ${playerMoney} dollars with ${playerSwag}`)
 
 } else {
   console.log("Invalid Selection")
