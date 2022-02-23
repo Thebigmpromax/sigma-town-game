@@ -108,6 +108,16 @@ do {
   daily
 } while (playerMale != "Sigma Male" && inChoice == false)
 
-} else {
+}
+
+else {
   console.log("Invalid Selection")
 };
+
+if(playerMale == "Sigma Male" && playerMoney < 1000 && playerHouse == "Apartment" && playerSwag == "Poor Gear") {
+  console.log("You became a Sigma Male, but ur still uncool")
+} else if(playerMoney >= 1000 && playerHouse == "Mansion" && playerSwag == "Gucci" && playerMale == "Sigma Male") {
+  console.log("You became a Sigma Male and ur The Best. A Ligma Male.")
+} else {
+  console.log("Ur a sigma and ur decent.")
+}
