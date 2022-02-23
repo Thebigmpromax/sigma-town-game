@@ -24,7 +24,7 @@ function daily(choice) {
   } else if(choice == "B" && playerMale == "Alpha Male") {
   playerMale = "Sigma Male"
   console.log("You are a Sigma Male");
-  } else if(choice == "C" ) {
+  } else if(choice == "C" && playerSwag != "Gucci") {
     playerMoney -100;
     playerSwag == "Gucci"
     console.log("You got dat DRIP")
@@ -128,3 +128,6 @@ if(playerMale == "Sigma Male" && playerMoney < 1000 && playerHouse == "Apartment
 } else {
   console.log("Ur a sigma and ur decent.")
 }
+await new Promise(resolve => setTimeout(resolve, 5000));
+console.log("Shutting Down")
+await new Promise(resolve => setTimeout(resolve, 5000));
