@@ -5,14 +5,33 @@ let playerMoney = "100";
 let playerHouse = "Apartment";
 let playerSwag = "Poor Gear";
 let playerMale = "Beta Male";
+let inChoice = false;
 
 function daily(choice) {
+  inChoice = true;
   console.log(`
   A. Start working
   B. Grind
   C. Get Swag`)
-  choice = prompt('');
-}
+  choice = prompt('')
+  if(choice == "A") {
+    playerMoney + 100;
+    console.log("you get money.")
+  } else if(choice == "B" && playerMale == "Beta Male") {
+    playerMale = "Alpha Male"
+    console.log("You are an Alpha Male Now.")
+  } else if(choice == "B" && playerMale == "Alpha Male") {
+  playerMale = "Sigma Male"
+  console.log("You are a Sigma Male");
+  } else if(choice == "C" ) {
+    playerMoney -100;
+    playerSwag == "Gucci"
+    console.log("You got dat DRIP")
+  } else if(choice == "C" && playerSwag == "Gucci") {
+    console.log("U already got dat DRIP.")
+  }
+  inChoice = false;
+} 
 
 console.log(`
 
@@ -64,6 +83,11 @@ if (select == "A") {
       }
     })
   }
+
+  do {
+    daily()
+  } while (playerMale != "Sigma Male" && inChoice == false)
+
 } else if (select == "B") {
 const loadMoney = fs.readFileSync("playerMoney.txt", "utf8")
 playerMoney = loadMoney
@@ -78,6 +102,11 @@ const loadMale = fs.readFileSync("playerMale.txt", "utf8")
 playerMale = loadMale
 console.log('Loaded playerMale.txt')
 console.log(`I am a ${playerMale} in my ${playerHouse} and have ${playerMoney} dollars with ${playerSwag}`)
+daily();
+
+do {
+  daily
+} while (playerMale != "Sigma Male" && inChoice == false)
 
 } else {
   console.log("Invalid Selection")
