@@ -49,11 +49,10 @@ console.log('loaded playerMoney.txt')
 const loadHouse = fs.readFileSync("playerHouse.txt", "utf8")
 playerHouse = loadHouse
 console.log('Loaded playerHouse.txt')
-console.log(`I am in my ${playerHouse} and have ${playerMoney} dollars.`)
 const loadSwag = fs.readFileSync("playerSwag.txt", "utf8")
 playerSwag = loadSwag
 console.log('Loaded playerSwag.txt')
-console.log(`I am in my ${playerHouse} and have ${playerMoney} dollars.`)
+console.log(`I am in my ${playerHouse} and have ${playerMoney} dollars with ${playerSwag}`)
 
 } else {
   console.log("Invalid Selection")
