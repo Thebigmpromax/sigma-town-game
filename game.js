@@ -4,6 +4,7 @@ const prompt = require("prompt-sync")();
 let playerMoney = "100";
 let playerHouse = "Apartment";
 let playerSwag = "Poor Gear";
+let playerMale = "Beta Male";
 
 function daily(choice) {
   console.log(`
@@ -56,6 +57,12 @@ if (select == "A") {
         return
       }
     })
+    fs.writeFile ("playerMale.txt", playerMale, err => {
+      if (err) {
+        console.log(err)
+        return
+      }
+    })
   }
  
 } else if (select == "B") {
@@ -68,7 +75,10 @@ console.log('Loaded playerHouse.txt')
 const loadSwag = fs.readFileSync("playerSwag.txt", "utf8")
 playerSwag = loadSwag
 console.log('Loaded playerSwag.txt')
-console.log(`I am in my ${playerHouse} and have ${playerMoney} dollars with ${playerSwag}`)
+const loadMale = fs.readFileSync("playerMale.txt", "utf8")
+playerMale = loadMale
+console.log('Loaded playerMale.txt')
+console.log(`I am a ${playMale} in my ${playerHouse} and have ${playerMoney} dollars with ${playerSwag}`)
 
 } else {
   console.log("Invalid Selection")
