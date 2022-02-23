@@ -12,7 +12,8 @@ function daily(choice) {
   console.log(`
   A. Start working
   B. Grind
-  C. Get Swag`)
+  C. Get Swag
+  D. Buy A House`)
   choice = prompt('')
   if(choice == "A") {
     playerMoney + 100;
@@ -29,6 +30,12 @@ function daily(choice) {
     console.log("You got dat DRIP")
   } else if(choice == "C" && playerSwag == "Gucci") {
     console.log("U already got dat DRIP.")
+  } else if(choice == "D" && playerHouse != "Mansion") {
+    playerMoney - 500
+    playerHouse == "Mansion"
+    console.log("U got the House")
+  } else if(choice == "D" && playerHouse == "Mansion") {
+    console.log("U already got da mansion.")
   }
   inChoice = false;
 } 
