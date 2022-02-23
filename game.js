@@ -34,6 +34,12 @@ if (select == "A") {
         return
       }
     })
+    fs.writeFile ("playerSwag.txt", playerSwag, err => {
+      if (err) {
+        console.log(err)
+        return
+      }
+    })
   }
  
 } else if (select == "B") {
@@ -44,9 +50,9 @@ const loadHouse = fs.readFileSync("playerHouse.txt", "utf8")
 playerHouse = loadHouse
 console.log('Loaded playerHouse.txt')
 console.log(`I am in my ${playerHouse} and have ${playerMoney} dollars.`)
-const loadHouse = fs.readFileSync("playerHouse.txt", "utf8")
-playerHouse = loadHouse
-console.log('Loaded playerHouse.txt')
+const loadSwag = fs.readFileSync("playerSwag.txt", "utf8")
+playerSwag = loadSwag
+console.log('Loaded playerSwag.txt')
 console.log(`I am in my ${playerHouse} and have ${playerMoney} dollars.`)
 
 } else {
