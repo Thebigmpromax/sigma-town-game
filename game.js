@@ -1,10 +1,11 @@
 const fs = require("fs");
 const prompt = require("prompt-sync")();
+var sleep = require('system-sleep');
 
 let playerMoney = "100";
 let playerHouse = "Apartment";
 let playerSwag = "Poor Gear";
-let playerMale = "Beta Male";
+let playerMale = "Amogus Dude";
 let inChoice = false;
 
 function daily(choice) {
@@ -13,29 +14,55 @@ function daily(choice) {
   A. Start working
   B. Grind
   C. Get Swag
-  D. Buy A House`)
+  D. Buy A House
+  Type S To Save Game`)
   choice = prompt('')
   if(choice == "A") {
     playerMoney + 100;
     console.log("you get money.")
-  } else if(choice == "B" && playerMale == "Beta Male") {
-    playerMale = "Alpha Male"
+  } else if(choice == "B" && playerMale == "Amogus Dude") {
+    playerMale = "Epic DUde"
     console.log("You are an Alpha Male Now.")
-  } else if(choice == "B" && playerMale == "Alpha Male") {
-  playerMale = "Sigma Male"
+  } else if(choice == "B" && playerMale == "Epic Dude") {
+  playerMale = "Gamer"
   console.log("You are a Sigma Male");
-  } else if(choice == "C" && playerSwag != "Gucci") {
-    playerMoney -100;
-    playerSwag == "Gucci"
-    console.log("You got dat DRIP")
-  } else if(choice == "C" && playerSwag == "Gucci") {
+  } else if(choice == "C" && playerSwag != "Keyboard") {
+    playerMoney - 100;
+    playerSwag = "Keyboard";
+    console.log("U got dat DRIP");
+  } else if(choice == "C" && playerSwag ==  "Keyboard") {
     console.log("U already got dat DRIP.")
   } else if(choice == "D" && playerHouse != "Mansion") {
-    playerMoney - 500
+    playerMoney - 500;
     playerHouse == "Mansion"
     console.log("U got the House")
   } else if(choice == "D" && playerHouse == "Mansion") {
     console.log("U already got da mansion.")
+  } else if(choice == "S") {
+    fs.writeFile ("playerMoney.txt", playerMoney, err => {
+      if (err) {
+        console.log(err)
+        return
+      }
+    })
+    fs.writeFile ("playerHouse.txt", playerHouse, err => {
+      if (err) {
+        console.log(err)
+        return
+      }
+    })
+    fs.writeFile ("playerSwag.txt", playerSwag, err => {
+      if (err) {
+        console.log(err)
+        return
+      }
+    })
+    fs.writeFile ("playerMale.txt", playerMale, err => {
+      if (err) {
+        console.log(err)
+        return
+      }
+    })
   }
   inChoice = false;
 } 
@@ -121,12 +148,12 @@ else {
   console.log("Invalid Selection")
 };
 
-if(playerMale == "Sigma Male" && playerMoney < 1000 && playerHouse == "Apartment" && playerSwag == "Poor Gear") {
+if(playerMale == "Gamer" && playerMoney < 1000 && playerHouse == "Apartment" && playerSwag == "Poor Gear") {
   console.log("You became a Sigma Male, but ur still uncool")
-} else if(playerMoney >= 1000 && playerHouse == "Mansion" && playerSwag == "Gucci" && playerMale == "Sigma Male") {
-  console.log("You became a Sigma Male and ur The Best. A Ligma Male.")
+} else if(playerMoney >= 1000 && playerHouse == "Mansion" && playerSwag == "Keyboard" && playerMale == "Gamer") {
+  console.log("Ur an epic gamer.")
 } else {
   console.log("Ur a sigma and ur decent.")
 }
-var sleep = require('system-sleep');
-sleep(10*1000);
+sleep(10*500);
+console.log("Ending Program");
