@@ -22,10 +22,10 @@ function daily(choice) {
     console.log("you get money.")
   } else if(choice == "B" && playerMale == "Amogus Dude") {
     playerMale = "Epic DUde"
-    console.log("You are an Alpha Male Now.")
+    console.log("You are an Epic Dude Now.")
   } else if(choice == "B" && playerMale == "Epic Dude") {
   playerMale = "Gamer"
-  console.log("You are a Sigma Male");
+  console.log("You are a Gamer");
   } else if(choice == "C" && playerSwag != "Keyboard") {
     playerMoney - 100;
     playerSwag = "Keyboard";
