@@ -26,11 +26,14 @@ function daily(choice) {
   } else if(choice == "B" && playerMale == "Epic Dude") {
   playerMale = "Gamer"
   console.log("You are a Gamer");
+  } else if(choice == "B" && playerMale == "Gamer") {
+    playerMale = "Epic Gamer"
+    console.log("U won gamer")
   } else if(choice == "C" && playerSwag != "Keyboard") {
     playerMoney - 100;
     playerSwag = "Keyboard";
     console.log("U got dat DRIP");
-  } else if(choice == "C" && playerSwag ==  "Keyboard") {
+  } else if(choice == "C" && playerSwag == "Keyboard") {
     console.log("U already got dat DRIP.")
   } else if(choice == "D" && playerHouse != "Mansion") {
     playerMoney - 500;
@@ -63,8 +66,9 @@ function daily(choice) {
         return
       }
     })
+  } else {
+    console.log("Invalid Selection")
   }
-  inChoice = false;
 } 
 
 console.log(`
@@ -120,7 +124,7 @@ if (select == "A") {
 
   do {
     daily()
-  } while (playerMale != "Sigma Male" && inChoice == false)
+  } while (playerMale != "Epic Gamer")
 
 } else if (select == "B") {
 const loadMoney = fs.readFileSync("playerMoney.txt", "utf8")
@@ -140,7 +144,7 @@ daily();
 
 do {
   daily
-} while (playerMale != "Sigma Male" && inChoice == false)
+} while (playerMale != "Epic Gamer")
 
 }
 
@@ -148,12 +152,6 @@ else {
   console.log("Invalid Selection")
 };
 
-if(playerMale == "Gamer" && playerMoney < 1000 && playerHouse == "Apartment" && playerSwag == "Poor Gear") {
-  console.log("You became a Sigma Male, but ur still uncool")
-} else if(playerMoney >= 1000 && playerHouse == "Mansion" && playerSwag == "Keyboard" && playerMale == "Gamer") {
-  console.log("Ur an epic gamer.")
-} else {
-  console.log("Ur a gamer and ur decent.")
-}
+
 sleep(10*500);
 console.log("Ending Program");
