@@ -21,7 +21,7 @@ function daily(choice) {
     playerMoney + 100;
     console.log("you get money.")
   } else if(choice == "B" && playerMale == "Amogus Dude") {
-    playerMale = "Epic DUde"
+    playerMale = "Epic Dude"
     console.log("You are an Epic Dude Now.")
   } else if(choice == "B" && playerMale == "Epic Dude") {
   playerMale = "Gamer"
@@ -153,7 +153,7 @@ if(playerMale == "Gamer" && playerMoney < 1000 && playerHouse == "Apartment" && 
 } else if(playerMoney >= 1000 && playerHouse == "Mansion" && playerSwag == "Keyboard" && playerMale == "Gamer") {
   console.log("Ur an epic gamer.")
 } else {
-  console.log("Ur a sigma and ur decent.")
+  console.log("Ur a gamer and ur decent.")
 }
 sleep(10*500);
 console.log("Ending Program");
